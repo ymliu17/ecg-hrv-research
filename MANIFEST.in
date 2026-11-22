@@ -1,0 +1,13 @@
+include README.md LICENSE CHANGELOG.md CONTRIBUTING.md requirements-tested.txt requirements-py311-tested.lock
+recursive-include docs *.md
+recursive-include configs *.json
+recursive-include examples *.md
+recursive-include examples/synthetic_smoke *.csv *.json
+recursive-include tests *.py
+recursive-include scripts *.py
+recursive-include .github *.yml
+prune examples/generated
+prune outputs
+prune private
+prune data
+global-exclude *.pyc .DS_Store
