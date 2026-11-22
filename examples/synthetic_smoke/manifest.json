@@ -1,0 +1,13 @@
+{
+  "recordings": [
+    {
+      "id": "synthetic-001",
+      "file": "lead1.csv",
+      "second_file": "lead2.csv",
+      "format": "csv",
+      "column": "ecg",
+      "time_column": "time_s",
+      "sampling_rate_hz": 250.0
+    }
+  ]
+}
