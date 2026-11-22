@@ -1,0 +1,29 @@
+name: research-release
+on:
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-py311-tested.lock
+      - run: python -m pip install '.[dev]'
+      - run: python -m pytest -q
+      - run: python -m build
+      - run: python scripts/build_release.py
+      - name: Attach verified release artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" dist/*.whl dist/*.tar.gz dist/*-source.zip dist/*-source.zip.sha256
