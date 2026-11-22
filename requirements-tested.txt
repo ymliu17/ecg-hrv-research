@@ -1,0 +1,6 @@
+# Direct numerical dependencies tested locally; not a transitive lockfile.
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+neurokit2==0.2.13
+# Optional ACQ loader: bioread==2025.5.2
