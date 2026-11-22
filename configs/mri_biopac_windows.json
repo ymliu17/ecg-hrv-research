@@ -1,0 +1,31 @@
+{
+  "profile": "mri_biopac",
+  "sampling_rate_hz": 1000.0,
+  "malik_mode": "compare",
+  "malik_threshold": 0.2,
+  "malik_window": 11,
+  "frequency_min_span_s": 300.0,
+  "fallback_detector": false,
+  "require_crosslead": false,
+  "max_duration_s": 300,
+  "window_s": 60,
+  "step_s": 30,
+  "qc": {
+    "rr_min_ms": 300.0,
+    "rr_max_ms": 1500.0,
+    "min_peaks": 11,
+    "min_duration_s": 15,
+    "min_valid_rr": 10,
+    "max_invalid_pct": 30.0,
+    "max_artifact_pct": 20.0,
+    "min_hr_bpm": 40.0,
+    "max_hr_bpm": 120.0,
+    "max_rmssd_meannn": 0.3,
+    "min_coverage": 0.8,
+    "max_hr_consistency_bpm": 5.0,
+    "max_hr_se_bpm": 2.0,
+    "max_crosslead_hr_diff_bpm": 2.0,
+    "min_sdnn_ms": 10.0,
+    "min_rmssd_ms": 5.0
+  }
+}
