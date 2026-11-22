@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "seed": 2026,
+  "duration_s": 60.0,
+  "sampling_rate_hz": 250.0,
+  "generator": "analytic Gaussian P/QRS/T plus sinusoids and noise",
+  "limitations": "Does not simulate MRI gradient artifacts, arrhythmias or clinical populations"
+}
